@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-class Times extends React.Component{
+class Times extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,17 +16,18 @@ class Times extends React.Component{
 
     getTimes = () => {
         axios.get('https://pt04hn1ypb.execute-api.us-west-2.amazonaws.com/prod')
-        .then(response =>{
-            let data = response.data;
-            this.setState({
-                time: data
+            .then(response => {
+                let data = response.data;
+                this.setState({
+                    time: data
+                })
+                console.log(data);
             })
-            console.log(data);
-        })
     }
 
-    render(){
-        return(
+    render() {
+
+        return (
             <div>
                 <table className="table">
                     <thead>
