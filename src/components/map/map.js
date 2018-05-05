@@ -34,6 +34,7 @@ class Map extends React.Component {
                     water4: data.times[3] > 15 ? 'red' : data.times[3] > 6 ? 'orange' : 'green',
 
                 })
+                console.log(this.state)
             });
     }
     render() {

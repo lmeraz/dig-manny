@@ -32,5 +32,8 @@
 }
 
 .edcMap {
-  max-width: 50vw;
+  max-height: 80vh;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
 }
