@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './components/map/map.js';
 import Times from './components/times/times.js';
+import Key from './components/key/key.js';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           </div>
           <div className="col-sm-4">
             <Times/>
+            <Key/>
           </div>
         </div>
       </div>
