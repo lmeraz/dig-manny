@@ -5,24 +5,48 @@ class Times extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            station: "",
-            time: null
         };
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.getTimes();
     }
 
     getTimes = () => {
         axios.get('https://pt04hn1ypb.execute-api.us-west-2.amazonaws.com/prod')
-            .then(response => {
-                let data = response.data;
-                this.setState({
-                    time: data
-                })
-                console.log(data);
+
+        .then(response =>{
+            let data = response.data.times;
+            console.log(data);
+            debugger;
+            const listItems = data.map((waitTime, station)=>{
+                return <tr key= {waitTime}><td>{station+1}</td><td>{waitTime}</td></tr>
+            }
+            
+        )
+        // switch(waitTime) {
+        //     case (waitTime >= 15):
+        //         break;
+        //     case (waitTime < 15 && waitTime > 5):
+        //         console.log("test");
+        //         break;
+        //     case (waitTime <= 5 && waitTime > 0):
+        //         break;
+        //     default:
+        // }
+        
+        this.setState({
+                time: listItems
             })
+        
+            // this.setState({
+            //     time1: data[0],
+            //     time2: data[1],
+            //     time3: data[2],
+            //     time4: data[3]
+            // })
+        })
+
     }
 
     render() {
@@ -37,18 +61,7 @@ class Times extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Green</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Red</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Red</td>
-                        </tr>
+                        {this.state.time}
                     </tbody>
                 </table>
             </div>

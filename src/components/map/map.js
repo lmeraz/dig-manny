@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import edcmap from "../../images/edcmap.jpg";
 
+
 class Map extends React.Component {
 
     constructor(props) {
@@ -47,6 +48,7 @@ class Map extends React.Component {
                 <div style={{ color: this.state.water3 }}>3</div>
                 <div style={{ color: this.state.water4 }}>4</div>
             </div >
+
         )
     }
 }
