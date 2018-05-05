@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import edcmap from "../../images/edcmap.jpg";
 
 class Map extends React.Component {
 
@@ -13,13 +14,11 @@ class Map extends React.Component {
             water3: null,
             water4: null
         }
-        // const { data } = this.state
-        //const condition = data[0] > 15 ? 'red' : data[0] > 6 ? 'orange' : 'green';
-
     }
 
     componentWillMount = () => {
         this.getTimes();
+        console.log(this)
     }
 
 
@@ -35,15 +34,13 @@ class Map extends React.Component {
                     water4: data.times[3] > 15 ? 'red' : data.times[3] > 6 ? 'orange' : 'green',
 
                 })
-                console.log('state is', this.state)
             });
-
     }
     render() {
 
         return (
             <div>
-                <img src="https://edmidentity.com/wp-content/uploads/2017/06/EDC-Las-Vegas-2017-Festival-Map.jpg" alt="edcMap" className="edcMap" />
+                <img src={edcmap} alt="edcMap" className="edcMap" />
                 <div style={{ color: this.state.water1 }}>1</div>
                 <div style={{ color: this.state.water2 }}>2</div>
                 <div style={{ color: this.state.water3 }}>3</div>
