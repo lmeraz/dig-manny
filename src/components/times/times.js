@@ -21,6 +21,7 @@ class Times extends React.Component{
             this.setState({
                 time: data
             })
+            console.log(data);
         })
     }
 
