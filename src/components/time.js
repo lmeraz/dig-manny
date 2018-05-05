@@ -2,6 +2,12 @@ import React from 'react';
 
 export default () => {
     return (
-        <h1>This will be waiting time area </h1>
+        <ul>
+            Wait time:
+            <li>Water Station 1: <span> </span>minutes</li>
+            <li>Water Station 2: <span> </span>minutes</li>
+            <li>Water Station 3: <span> </span>minutes</li>
+            <li>Water Station 4: <span> </span>minutes</li>
+        </ul>
     )
 }
