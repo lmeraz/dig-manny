@@ -17,12 +17,27 @@ class Times extends React.Component{
         .then(response =>{
             let data = response.data.times;
             console.log(data);
-            const listItems = data.map((waitTime, station)=>
-            <tr key= {waitTime}><td>{station+1}</td><td>{waitTime}  minutes</td></tr>
+            debugger;
+            const listItems = data.map((waitTime, station)=>{
+                return <tr key= {waitTime}><td>{station+1}</td><td>{waitTime}</td></tr>
+            }
+            
         )
-            this.setState({
+        // switch(waitTime) {
+        //     case (waitTime >= 15):
+        //         break;
+        //     case (waitTime < 15 && waitTime > 5):
+        //         console.log("test");
+        //         break;
+        //     case (waitTime <= 5 && waitTime > 0):
+        //         break;
+        //     default:
+        // }
+        
+        this.setState({
                 time: listItems
             })
+        
             // this.setState({
             //     time1: data[0],
             //     time2: data[1],

@@ -7,3 +7,8 @@ body {
 li {
   list-style-type: none;
 }
+
+.edcMap{
+  max-height: 100vh;
+  max-width: 100vw;
+}
