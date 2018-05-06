@@ -3,7 +3,18 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-image: url("../src/images/bg.jpg");
+  /* background-image: url("../src/images/bubbles.gif"); */
   background-size: cover;
+}
+
+#root{
+  background-image: url("../src/images/bubbles.gif");
+  height: 100%;
+}
+
+.bubbles{
+  z-index: 5px;
+  position: absolute;
 }
 
 li {
