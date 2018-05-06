@@ -17,9 +17,9 @@ class Map extends React.Component {
         }
     }
 
-    componentWillMount = () => {
-        this.getTimes();
-        console.log(this)
+    componentDidMount = () => {
+        this.getTimes()
+        console.log("this:", this)
     }
 
 
@@ -29,10 +29,10 @@ class Map extends React.Component {
                 let data = response.data;
                 this.setState({
                     data: data.times,
-                    water1: data.times[0] >= 15 ? '#CC444A' : data.times[0] > 6 ? '#F7C244' : '#53A351',
-                    water2: data.times[1] >= 15 ? '#CC444A' : data.times[1] > 6 ? '#F7C244' : '#53A351',
-                    water3: data.times[2] >= 15 ? '#CC444A' : data.times[2] > 6 ? '#F7C244' : '#53A351',
-                    water4: data.times[3] >= 15 ? '#CC444A' : data.times[3] > 6 ? '#F7C244' : '#53A351',
+                    water1: data.times[0] >= 15 ? '#CC444A' : data.times[0] > 5 ? '#F7C244' : '#53A351',
+                    water2: data.times[1] >= 15 ? '#CC444A' : data.times[1] > 5 ? '#F7C244' : '#53A351',
+                    water3: data.times[2] >= 15 ? '#CC444A' : data.times[2] > 5 ? '#F7C244' : '#53A351',
+                    water4: data.times[3] >= 15 ? '#CC444A' : data.times[3] > 5 ? '#F7C244' : '#53A351',
 
                 })
                 console.log(this.state)
