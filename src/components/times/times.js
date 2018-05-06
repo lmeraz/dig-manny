@@ -31,11 +31,13 @@ class Times extends React.Component {
                     return <tr key={waitTime}><td>{station + 1}</td><td><button type="button" className={this.state.waitColor} />
                     </td></tr>
                 }
+
                 )
 
                 this.setState({
                     time: listItems
                 })
+
             })
     }
 

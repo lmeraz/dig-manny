@@ -46,3 +46,16 @@ form {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#owl{
+  height: 50%;
+  width: 50%;
+  /* float: left; */
+  transform: translateX(-60%);
+}
+
+.panel{
+  bottom: 20%;
+  left: 45%;
+  position: absolute;
+}
