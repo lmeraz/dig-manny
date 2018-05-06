@@ -51,3 +51,10 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#owl{
+  height: 25%;
+  width: 25%;
+  /* float: left; */
+  transform: translateX(-60%);
+}

@@ -28,7 +28,7 @@ class Times extends React.Component{
                 else{
                     this.setState({waitColor: "btn btn-block btn-success"})
                 }
-                return <tr key= {waitTime}><td>{station+1}</td><td><button type="button" className= {this.state.waitColor}/>
+                return <tr key= {station}><td>{station+1}</td><td><button type="button" className= {this.state.waitColor}/>
                 </td></tr>
             }
         )
