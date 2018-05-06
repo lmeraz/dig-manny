@@ -18,7 +18,6 @@ class Times extends React.Component {
             .then(response => {
                 let data = response.data.times;
                 console.log(data);
-                debugger;
                 const listItems = data.map((waitTime, station) => {
                     let waitTimeColor = waitTime >= 15 ? 'btn btn-danger' : waitTime > 6 ? 'btn btn-warning' : 'btn btn-success'
                     return <tr key={waitTime}><td>{station + 1}</td><td><button type="button" className={waitTimeColor}></button></td></tr>

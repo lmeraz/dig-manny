@@ -43,10 +43,10 @@ class Map extends React.Component {
         return (
             <div>
                 <img src={edcmap} alt="edcMap" className="edcMap" />
-                <div style={{ color: this.state.water1 }}>1</div>
-                <div style={{ color: this.state.water2 }}>2</div>
-                <div style={{ color: this.state.water3 }}>3</div>
-                <div style={{ color: this.state.water4 }}>4</div>
+                <div style={{ color: this.state.water1 }} className="waterStation" id="waterStation1">1</div>
+                <div style={{ color: this.state.water2 }} className="waterStation" id="waterStation2">2</div>
+                <div style={{ color: this.state.water3 }} className="waterStation" id="waterStation3">3</div>
+                <div style={{ color: this.state.water4 }} className="waterStation" id="waterStation4">4</div>
             </div >
 
         )

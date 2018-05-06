@@ -32,8 +32,37 @@
 }
 
 .edcMap {
-  max-height: 80vh;
-  border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px #888888;
+  max-height: 90vh;
+  border: 7px solid white;
 }
+
+.waterStation {
+  border-radius: 50%;
+  border: 1px solid red;
+  height: 40px;
+  width: 40px;
+  bottom: 0;
+  z-index: 2px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 2em;
+  position: absolute;
+  background-color: white;
+}
+
+#waterStation1 {
+  top: 51%;
+  left: 38%;
+};
+#waterStation2 {
+  top: 1%;
+  left: 1%;
+};
+#waterStation3 {
+  top: 1%;
+  left: 1%;
+};
+#waterStation4 {
+  top: 1%;
+  left: 1%;
+};
