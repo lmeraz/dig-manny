@@ -9,13 +9,18 @@ class App extends Component {
     return (
       <div className="App">
         <div className="row">
-          <div className="col-sm-8">
-            <Map />
+
+          <div className= "col-sm-1"/> 
+          <div className="col-sm-6"> 
+            <Map/>
           </div>
           <div className="col-sm-4">
-            <Times />
-            <Key />
+            <form>
+              <Times/>
+              <Key/>
+            </form>
           </div>
+          <div className="col-sm-1"/>
         </div>
       </div>
     );
