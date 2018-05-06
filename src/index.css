@@ -23,7 +23,6 @@ li {
 }
 
 .edcMap{
-  margin: 5vh auto;
   max-height: 80vh;
   max-width: 100vw;
   border: 10px solid white;
@@ -31,7 +30,6 @@ li {
 }
 
 form {
-  margin: 5vh auto;
   border: 10px solid white;
   box-shadow: 5px 10px #313131;
   background-color: white;
