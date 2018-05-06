@@ -53,8 +53,14 @@ body, html {
 }
 
 #owl{
-  height: 25%;
-  width: 25%;
+  height: 50%;
+  width: 50%;
   /* float: left; */
   transform: translateX(-60%);
+}
+
+.panel{
+  bottom: 20%;
+  left: 45%;
+  position: absolute;
 }

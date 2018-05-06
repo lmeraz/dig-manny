@@ -8,13 +8,21 @@ import owl from "./images/owl.gif";
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state ={
+      timer: false
+    };
+  }
   
   componentWillMount = () => {
-    setInterval(function(){
-      console.log("Drink Water")
-      
-    
-    }, 3000);
+    setInterval(()=>{
+      this.setState({timer: true});
+      setTimeout(()=>{
+        this.setState({timer: false});
+      }, 800);
+    }
+    , 4000);
   }
 
   render() {
@@ -24,7 +32,6 @@ class App extends Component {
           <h1 className="App-title"><img src = {welcome} alt=""/></h1>
         </header>
         <div className="row">
-          {/* <div className= "col-sm-1"/>  */}
           <div className="col-sm-7"> 
             <Map/>
           </div>
@@ -33,9 +40,14 @@ class App extends Component {
               <Times/>
               <Key/>
             </form>
+            {this.state.timer === true &&
+              <div className="panel panel-default">
+              <div className="panel-body">DRINK WATER!</div>
+            </div>
+            }
+            
+            <img id= "owl" src={owl} alt=""/>
           </div>
-          {/* <div className="col-sm-1"/> */}
-          <img id= "owl" src={owl} alt=""/>
         </div>
       </div>
     );
