@@ -12,13 +12,17 @@ class App extends Component {
           <h1 className="App-title">Welcome to EDC</h1>
         </header> */}
         <div className="row">
-          <div className="col-sm-8"> 
+          <div className= "col-sm-1"/> 
+          <div className="col-sm-6"> 
             <Map/>
           </div>
           <div className="col-sm-4">
-            <Times/>
-            <Key/>
+            <form>
+              <Times/>
+              <Key/>
+            </form>
           </div>
+          <div className="col-sm-1"/>
         </div>
       </div>
     );
