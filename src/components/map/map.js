@@ -29,10 +29,10 @@ class Map extends React.Component {
                 let data = response.data;
                 this.setState({
                     data: data.times,
-                    water1: data.times[0] > 15 ? 'red' : data.times[0] > 6 ? 'orange' : 'green',
-                    water2: data.times[1] > 15 ? 'red' : data.times[1] > 6 ? 'orange' : 'green',
-                    water3: data.times[2] > 15 ? 'red' : data.times[2] > 6 ? 'orange' : 'green',
-                    water4: data.times[3] > 15 ? 'red' : data.times[3] > 6 ? 'orange' : 'green',
+                    water1: data.times[0] >= 15 ? '#CC444A' : data.times[0] > 6 ? '#F7C244' : '#53A351',
+                    water2: data.times[1] >= 15 ? '#CC444A' : data.times[1] > 6 ? '#F7C244' : '#53A351',
+                    water3: data.times[2] >= 15 ? '#CC444A' : data.times[2] > 6 ? '#F7C244' : '#53A351',
+                    water4: data.times[3] >= 15 ? '#CC444A' : data.times[3] > 6 ? '#F7C244' : '#53A351',
 
                 })
                 console.log(this.state)
@@ -41,12 +41,12 @@ class Map extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="holder">
                 <img src={edcmap} alt="edcMap" className="edcMap" />
-                <div style={{ color: this.state.water1 }} className="waterStation" id="waterStation1">1</div>
-                <div style={{ color: this.state.water2 }} className="waterStation" id="waterStation2">2</div>
-                <div style={{ color: this.state.water3 }} className="waterStation" id="waterStation3">3</div>
-                <div style={{ color: this.state.water4 }} className="waterStation" id="waterStation4">4</div>
+                <div style={{ backgroundColor: this.state.water1 }} className="waterStation" id="waterstation1">1</div>
+                <div style={{ backgroundColor: this.state.water2 }} className="waterStation" id="waterstation2">2</div>
+                <div style={{ backgroundColor: this.state.water3 }} className="waterStation" id="waterstation3">3</div>
+                <div style={{ backgroundColor: this.state.water4 }} className="waterStation" id="waterstation4">4</div>
             </div >
 
         )
