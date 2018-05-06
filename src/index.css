@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
   background-image: url("../src/images/bg.jpg");
   /* background-image: url("../src/images/bubbles.gif"); */
   background-size: cover;
@@ -22,7 +23,7 @@ li {
 }
 
 .edcMap{
-  margin-top: 10px;
+  margin: 5vh auto;
   max-height: 80vh;
   max-width: 100vw;
   border: 10px solid white;
@@ -30,14 +31,10 @@ li {
 }
 
 form {
-  margin-top: 10px;
+  margin: 5vh auto;
   border: 10px solid white;
   box-shadow: 5px 10px #313131;
   background-color: white;
-}
-
-body, html {
-  height: 100%;
 }
 
 .bg { 

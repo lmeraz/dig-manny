@@ -13,21 +13,21 @@ class App extends Component {
         {/* <header className="App-header">
           <h1 className="App-title">Welcome to EDC</h1>
         </header> */}
-        
+
         <div className="row">
           {/* <img class= "bubbles" src = {bubbles} alt= "bubbles"/> */}
 
-          <div className= "col-sm-1"/> 
-          <div className="col-sm-6"> 
-            <Map/>
+          <div className="col-sm-1" />
+          <div className="col-sm-6">
+            <Map />
           </div>
           <div className="col-sm-4">
             <form>
-              <Times/>
-              <Key/>
+              <Times />
+              <Key />
             </form>
           </div>
-          <div className="col-sm-1"/>
+          <div className="col-sm-1" />
         </div>
       </div>
     );

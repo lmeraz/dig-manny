@@ -45,6 +45,7 @@
 .edcMap {
   max-height: 90vh;
   border: 7px solid white;
+  margin-right: auto;
 }
 
 .waterStation {
