@@ -13,19 +13,17 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title"><img src={welcome} alt="" /></h1>
         </header>
-        <div className="row">
-          <div className="col-sm-1" />
-          <div className="col-sm-8">
-            <Map />
-
-          </div>
-          <div className="col-sm-2">
-            <form>
-              <Times />
-              <Key />
-            </form>
-          </div>
-          <div className="col-sm-1" />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-8">
+              <Map />
+            </div>
+            <div className="col-sm-4">
+              <form>
+                <Times />
+                <Key />
+              </form>
+            </div></div>
         </div>
       </div>
     );
