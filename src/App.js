@@ -34,7 +34,7 @@ class App extends Component {
         </header>
         <div className="container">
           <div className="row">
-            <div className="col-sm-8">
+            <div className="col-sm-7">
               <Map />
             </div>
             <div className="col-sm-5">

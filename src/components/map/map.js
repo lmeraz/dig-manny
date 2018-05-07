@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import edcmap from "../../images/edcmap.jpg";
+import $ from 'jquery';
 
 
 class Map extends React.Component {
@@ -9,7 +10,6 @@ class Map extends React.Component {
         super(props);
 
         this.state = {
-            data: null,
             water1: null,
             water2: null,
             water3: null,
@@ -24,19 +24,22 @@ class Map extends React.Component {
 
 
     getTimes = () => {
-        axios.get('https://pt04hn1ypb.execute-api.us-west-2.amazonaws.com/prod')
-            .then(response => {
-                let data = response.data;
-                this.setState({
-                    data: data.times,
-                    water1: data.times[0] >= 15 ? '#CC444A' : data.times[0] > 5 ? '#F7C244' : '#53A351',
-                    water2: data.times[1] >= 15 ? '#CC444A' : data.times[1] > 5 ? '#F7C244' : '#53A351',
-                    water3: data.times[2] >= 15 ? '#CC444A' : data.times[2] > 5 ? '#F7C244' : '#53A351',
-                    water4: data.times[3] >= 15 ? '#CC444A' : data.times[3] > 5 ? '#F7C244' : '#53A351',
+        function give_color_to_station(jClass) {
+            if ($(jClass).hasClass('btn-danger')) {
+                return '#CC444A'
+            } else if ($(jClass).hasClass('btn-warning')) {
+                return '#F7C244'
+            } else {
+                return '#53A351'
+            }
+        }
 
-                })
-                console.log(this.state)
-            });
+        this.setState({
+            water1: give_color_to_station($('td button:first')[0]),
+            water2: give_color_to_station($('td button:first')[1]),
+            water3: give_color_to_station($('td button:first')[2]),
+            water4: give_color_to_station($('td button:first')[3])
+        });
     }
     render() {
 
